@@ -1,0 +1,44 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/06/29 15:13:15 by yorimek           #+#    #+#             */
+/*   Updated: 2026/06/30 15:39:33 by yorimek          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "../include/Dog.hpp"
+
+Dog::Dog()
+{
+	std::cout << "Dog Default Constructor Called" << std::endl;
+	this->type = "Dog";
+	return ;
+}
+
+Dog::~Dog()
+{
+	std::cout << "Dog Destructor Called" << std::endl;
+	return ;
+}
+
+Dog::Dog(Dog const &copy): AAnimal()
+{
+	std::cout << "Dog Copy Constructor Called" << std::endl;
+	*this = copy;
+	return ;
+}
+Dog	&Dog::operator=(Dog const &other)
+{
+	AAnimal::operator=(other);
+	return (*this);	
+}
+
+void	Dog::makeSound(void)const
+{
+	std::cout << this->getType() << " says: **Wouf Wouf**" << std::endl;
+	return ;
+}

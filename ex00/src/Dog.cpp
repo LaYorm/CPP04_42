@@ -6,7 +6,7 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 15:13:15 by yorimek           #+#    #+#             */
-/*   Updated: 2026/06/29 15:15:50 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/06/30 12:51:20 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ Dog::~Dog()
 
 Dog::Dog(Dog const &copy): Animal()
 {
+	std::cout << "Dog Copy Constructor Called" << std::endl;
 	*this = copy;
 	return ;
 }

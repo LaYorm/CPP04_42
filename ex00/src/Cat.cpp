@@ -6,7 +6,7 @@
 /*   By: yorimek <yorimek@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/29 12:46:34 by yorimek           #+#    #+#             */
-/*   Updated: 2026/06/29 15:15:38 by yorimek          ###   ########.fr       */
+/*   Updated: 2026/06/30 12:51:24 by yorimek          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ Cat::~Cat()
 
 Cat::Cat(Cat const &copy): Animal()
 {
+	std::cout << "Cat Copy Constructor Called" << std::endl;
 	*this = copy;
 	return ;
 }

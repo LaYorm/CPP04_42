@@ -27,6 +27,7 @@ WrongCat::~WrongCat()
 
 WrongCat::WrongCat(WrongCat const &copy): WrongAnimal()
 {
+	std::cout << "WrongCat Copy Constructor Called" << std::endl;
 	*this = copy;
 	return ;
 }
